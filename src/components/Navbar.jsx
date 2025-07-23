@@ -12,6 +12,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link
           to="/"
+          data-testid="logo"
           className="text-2xl font-bold tracking-wide hover:text-cyan-400 transition"
         >
           Oipug<span className="text-cyan-400">Cart</span>
