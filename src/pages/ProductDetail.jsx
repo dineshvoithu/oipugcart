@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -11,16 +11,19 @@ import { toast } from "react-toastify";
 
 const ProductDetail = () => {
   const { id } = useParams();
+  const dispatch = useDispatch();
+
   const product = useSelector((state) =>
     state.products.items.find((p) => p.id === parseInt(id))
   );
-  const favourites = useSelector((state) => state.favourites.items);
-  const dispatch = useDispatch();
 
-  const isFavourite = favourites.some((item) => item.id === product?.id);
+  const isFavourite = useSelector((state) =>
+    state.favourites.items.some((item) => item.id === product?.id)
+  );
 
   const handleToggle = () => {
     if (!product) return;
+
     if (isFavourite) {
       dispatch(removeFromFavourites(product.id));
       toast.info("Removed from Favourites");
@@ -30,20 +33,26 @@ const ProductDetail = () => {
     }
   };
 
-  if (!product)
-    return <p className="p-4 text-center text-gray-600">Product not found.</p>;
+  // ✅ Handle not found
+  if (!product) {
+    return (
+      <div className="p-6 text-center text-gray-600 text-lg">
+        🚫 Product not found.
+      </div>
+    );
+  }
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8 bg-white rounded-lg shadow-sm">
-      <div className="flex flex-col md:flex-row gap-10">
-        <div className="md:w-1/2 flex justify-center">
+    <div className="max-w-5xl mx-auto px-4 py-8 bg-white rounded-lg shadow-md">
+      <div className="flex flex-col md:flex-row items-center gap-10">
+        <div className="w-full md:w-1/2 flex justify-center">
           <img
             src={product.image}
             alt={product.title}
-            className="w-full max-w-sm h-80 object-contain bg-gray-50 rounded-lg"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md h-80 object-contain bg-gray-50 rounded-lg"
           />
         </div>
-        <div className="md:w-1/2">
+        <div className="w-full md:w-1/2">
           <h1 className="text-3xl font-bold mb-3 text-gray-800">
             {product.title}
           </h1>
