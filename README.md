@@ -155,6 +155,8 @@ Lines        : 80.16%
 
 🔗 **Full HTML coverage report**: [https://coverage-report.surge.sh](https://coverage-report.surge.sh)
 
+Core business logic (Redux slices) is tested at 100%, and all reusable components and pages are covered with unit and integration tests. Files like App.jsx and main.jsx are entry points and don't contain business logic, so they're excluded from full coverage
+
 ---
 
 ## 📝 Notes
