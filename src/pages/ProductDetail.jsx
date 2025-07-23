@@ -43,7 +43,6 @@ const ProductDetail = () => {
             className="w-full max-w-sm h-80 object-contain bg-gray-50 rounded-lg"
           />
         </div>
-
         <div className="md:w-1/2">
           <h1 className="text-3xl font-bold mb-3 text-gray-800">
             {product.title}
@@ -74,6 +73,7 @@ const ProductDetail = () => {
             )}
           </button>
         </div>
+        git pull origin main --rebase
       </div>
     </div>
   );
