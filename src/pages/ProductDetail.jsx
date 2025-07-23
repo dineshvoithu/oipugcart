@@ -73,7 +73,6 @@ const ProductDetail = () => {
             )}
           </button>
         </div>
-        git pull origin main --rebase
       </div>
     </div>
   );
