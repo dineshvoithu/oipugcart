@@ -151,6 +151,8 @@ Lines        : 61.65%
 ✅ Redux slices have **100% coverage**  
 🧪 Components and pages covered except `Navbar` and `ProductDetail`
 
+> 📊 View full coverage report: [https://coverage-report.surge.sh](https://coverage-report.surge.sh)
+
 ---
 
 ## 📝 Notes
