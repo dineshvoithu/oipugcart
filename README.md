@@ -97,41 +97,44 @@ project-root/
 │
 │   ├── components/                # Reusable UI components
 │   │   ├── FilterSortBar.jsx
-│   │   ├── FilterSortBar.test.jsx # Done
+│   │   ├── FilterSortBar.test.jsx   # Done
 │   │   ├── ProductCard.jsx
-│   │   ├── ProductCard.test.jsx   # Done
+│   │   ├── ProductCard.test.jsx     # Done
 │   │   ├── SearchBar.jsx
-│   │   ├── SearchBar.test.jsx     # Done
-│   │   └── Navbar.jsx             
+│   │   ├── SearchBar.test.jsx       # Done
+│   │   ├── Navbar.jsx
+│   │   └── Navbar.test.jsx          # Done
 │
-│   ├── features/                 # Redux slices (modular structure)
+│   ├── features/                  # Redux slices (modular structure)
 │   │   ├── favourites/
 │   │   │   ├── favouritesSlice.js
-│   │   │   └── favouritesSlice.test.js # Done
+│   │   │   └── favouritesSlice.test.js   # Done
 │   │   ├── filters/
 │   │   │   ├── filtersSlice.js
-│   │   │   └── filtersSlice.test.js   # Done
+│   │   │   └── filtersSlice.test.js     # Done
 │   │   └── products/
 │   │       ├── productsSlice.js
-│   │       └── productsSlice.test.js  # Done
+│   │       └── productsSlice.test.js    # Done
 │
-│   ├── pages/                    # Page-level components
+│   ├── pages/                     # Page-level components
 │   │   ├── Favourites.jsx
-│   │   ├── Favourites.test.jsx    # Done
+│   │   ├── Favourites.test.jsx      # Done
 │   │   ├── ProductList.jsx
-│   │   ├── ProductList.test.jsx   # Done
-│   │   └── ProductDetail.jsx      
+│   │   ├── ProductList.test.jsx     # Done
+│   │   └── ProductDetail.jsx
+│   │       └── ProductDetail.test.jsx  # Done
 │
-│   ├── App.jsx                   # Main app with routes
-│   ├── main.jsx                  # App entry point
-│   └── setupTests.js            # Vitest + RTL setup
+│   ├── App.jsx                    # Main app with routes
+│   ├── main.jsx                   # App entry point
+│   └── setupTests.js             # Vitest + RTL setup
 │
 ├── tailwind.config.js
 ├── postcss.config.js
-├── vite.config.js               # Vite + Vitest configuration
-├── README.md                    # Complete project docs
+├── vite.config.js                # Vite + Vitest configuration
+├── README.md                     # Complete project docs
 ├── package.json
 └── .gitignore
+
 
 ```
 
@@ -142,14 +145,13 @@ project-root/
 As of the latest run (`npx vitest run --coverage`):
 
 ```
-Statements   : 61.65%
-Branches     : 82.14%
-Functions    : 66.66%
-Lines        : 61.65%
+Statements   : 80.16%
+Branches     : 83.58%
+Functions    : 72.00%
+Lines        : 80.16%
 ```
 
 ✅ **Redux slices:** 100% test coverage  
-🧪 **Components & Pages:** All covered **except** `Navbar` and `ProductDetail`
 
 🔗 **Full HTML coverage report**: [https://coverage-report.surge.sh](https://coverage-report.surge.sh)
 
