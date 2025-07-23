@@ -9,7 +9,7 @@ const SearchBar = () => {
   useEffect(() => {
     const delay = setTimeout(() => {
       dispatch(setSearch(localSearch.trim()));
-    }, 400); // ⏱️ debounce
+    }, 400);
 
     return () => clearTimeout(delay);
   }, [localSearch, dispatch]);

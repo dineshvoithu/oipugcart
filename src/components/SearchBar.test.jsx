@@ -16,13 +16,13 @@ describe("SearchBar", () => {
   let store;
 
   beforeEach(() => {
-    vi.useFakeTimers(); // ⏱️ mock all timers
+    vi.useFakeTimers(); //  mock all timers
     store = configureStore({ reducer: { filters: filtersReducer } });
   });
 
   afterEach(() => {
     vi.clearAllTimers();
-    vi.useRealTimers(); // ⏮️ restore real timers
+    vi.useRealTimers(); // restore real timers
   });
 
   it("renders search input", () => {

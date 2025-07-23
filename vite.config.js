@@ -6,9 +6,14 @@ import { configDefaults } from "vitest/config";
 export default defineConfig({
   plugins: [react()],
   test: {
-    globals: true, // ✅ Enables `expect`, `describe`, etc.
-    environment: "jsdom", // ✅ For DOM APIs like document, window
-    setupFiles: "./src/setupTests.js", // ✅ Loads testing library matchers
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./src/setupTests.js",
     exclude: [...configDefaults.exclude, "e2e/**"],
+    coverage: {
+      reporter: ["text", "html"], // ✅ no need to set provider manually in v3
+      reportsDirectory: "coverage",
+      enabled: true,
+    },
   },
 });

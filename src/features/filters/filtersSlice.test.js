@@ -1,4 +1,3 @@
-// src/features/filters/filtersSlice.test.js
 import filtersReducer, {
   setSearch,
   setCategory,

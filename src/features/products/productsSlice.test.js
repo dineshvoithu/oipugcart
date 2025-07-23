@@ -1,4 +1,3 @@
-// src/features/products/productsSlice.test.js
 import productsReducer, { fetchProducts } from "./productsSlice";
 import { configureStore } from "@reduxjs/toolkit";
 import axios from "axios";

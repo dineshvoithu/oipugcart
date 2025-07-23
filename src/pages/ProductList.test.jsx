@@ -7,7 +7,7 @@ import ProductList from "./ProductList";
 import thunk from "redux-thunk";
 import { vi } from "vitest";
 
-// ✅ Mock fetchProducts to reject
+//  Mock fetchProducts to reject
 vi.mock("../features/products/productsSlice", async () => {
   const actual = await vi.importActual("../features/products/productsSlice");
   return {
@@ -15,7 +15,7 @@ vi.mock("../features/products/productsSlice", async () => {
     fetchProducts: () => async (dispatch) => {
       dispatch({ type: "products/fetchProducts/pending" });
 
-      // ✅ dispatch rejected with proper error shape
+      //  dispatch rejected with proper error shape
       dispatch({
         type: "products/fetchProducts/rejected",
         payload: undefined,
@@ -33,7 +33,7 @@ describe("ProductList", () => {
         products: productsReducer,
         filters: filtersReducer,
       },
-      // ✅ no need to add thunk explicitly; it's already included
+      //  no need to add thunk explicitly; it's already included
     });
 
     render(
@@ -42,7 +42,7 @@ describe("ProductList", () => {
       </Provider>
     );
 
-    // ✅ Wait for error message to appear
+    //  Wait for error message to appear
     await waitFor(() => {
       expect(screen.getByText(/error: network error/i)).toBeInTheDocument();
     });

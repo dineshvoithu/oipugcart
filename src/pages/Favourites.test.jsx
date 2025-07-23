@@ -5,7 +5,6 @@ import favouritesReducer from "../features/favourites/favouritesSlice";
 import Favourites from "./Favourites";
 import { MemoryRouter } from "react-router-dom";
 
-// ✅ Use unique mock products
 const mockProduct1 = {
   id: 1,
   title: "Mock Product 1",
