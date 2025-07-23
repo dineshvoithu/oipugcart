@@ -6,7 +6,7 @@ A responsive React + Redux application to browse, search, filter, and favourite 
 
 ## 🚀 Live Demo
 
-🔗 [View Live on Vercel](https://your-vercel-link.vercel.app)
+🔗 [View Live on Vercel](https://oipugcart.vercel.app)
 
 ---
 
