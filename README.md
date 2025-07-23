@@ -139,7 +139,7 @@ project-root/
 
 ## 📊 Test Coverage Snapshot
 
-As of latest run (`npx vitest run --coverage`):
+As of the latest run (`npx vitest run --coverage`):
 
 ```
 Statements   : 61.65%
@@ -148,10 +148,10 @@ Functions    : 66.66%
 Lines        : 61.65%
 ```
 
-✅ Redux slices have **100% coverage**  
-🧪 Components and pages covered except `Navbar` and `ProductDetail`
+✅ **Redux slices:** 100% test coverage  
+🧪 **Components & Pages:** All covered **except** `Navbar` and `ProductDetail`
 
-> 📊 View full coverage report: [https://coverage-report.surge.sh](https://coverage-report.surge.sh)
+🔗 **Full HTML coverage report**: [https://coverage-report.surge.sh](https://coverage-report.surge.sh)
 
 ---
 
