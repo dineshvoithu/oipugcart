@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const PRODUCTS_URL = "https://fakestoreapi.com/products";
+const PRODUCTS_URL =
+  import.meta.env.VITE_API_URL || "https://fakestoreapi.com/products";
 
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
